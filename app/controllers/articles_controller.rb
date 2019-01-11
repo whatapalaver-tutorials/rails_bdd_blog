@@ -7,10 +7,14 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @artcile = Article.new(article_params)
-    @artcile.save
-    flash[:success] = "Article has been created"
-    redirect_to articles_path
+    @article = Article.new(article_params)
+    if @article.save
+      flash[:success] = "Article has been created"
+      redirect_to articles_path
+    else
+      flash[:danger] = "Article has not been created"
+      render :new
+    end
   end
 
 

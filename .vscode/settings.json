@@ -2,5 +2,6 @@
   "editor.formatOnSave": true,
   "files.associations": {
     "*.html.erb": "html"
-  }
+  },
+  "vscode-erb-beautify.tab": true
 }
